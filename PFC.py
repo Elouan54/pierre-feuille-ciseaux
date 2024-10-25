@@ -1,9 +1,5 @@
 import random
 
-choices = ['pierre', 'feuille', 'ciseaux']
-player_1 = choices[random.randint(0, 2)]
-player_2 = choices[random.randint(0, 2)]
-
 def play(player_1, player_2) :
     if player_1 == player_2:
         result = 'draw'
@@ -13,4 +9,13 @@ def play(player_1, player_2) :
         result = 'player 2 win'
     return result
 
-print(play(player_1, player_2))
+choices = ['pierre', 'feuille', 'ciseaux']
+player_1 = choices[random.randint(0, 2)]
+player_2 = choices[random.randint(0, 2)]
+print(player_1)
+print(player_2)
+
+try:
+    print(play(player_1, player_2))
+except ValueError:
+    print("error : " + ValueError)
